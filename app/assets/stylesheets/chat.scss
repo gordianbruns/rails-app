@@ -1,0 +1,14 @@
+// Place all the styles related to the Chat controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.message_box {
+  border-radius: 5px;
+  background: lightgray;
+  width: 50%;
+  margin-bottom: 16px;
+}
+
+.orange {
+  color: orange;
+}

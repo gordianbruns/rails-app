@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> </title>
+    <%= favicon_link_tag   asset_path('thumbs_up.png'), :rel => 'icon', :type =>  'image/png' %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <h1 class="main_heading">
+      <%= image_tag "rails.png", align:"left", alt:"Rails", height:"2%", width: "2%"%>
+      Gordian's Sample Application</h1>
+    <ul class="navbar">
+      <li><%= link_to "Bye", controller: "say", action: "bye"%></li>
+      <li class="right_border"><%= link_to "Hello", controller: "say", action: "hello"%></li>
+      <li class="right_border"><%= link_to "Home", controller: "say", action: "home"%></li>
+      <li class="right_border"><%= link_to "Users", controller: "users", action: "index" %></li>
+      <li class="right_border"><%= link_to "Messages", controller: "messages", action: "index" %></li>
+      <li class="right_border"><%= link_to "UserMessages", controller: "cntrlrl", action: "display" %></li>
+      <li class="right_border"><%= link_to "Chat", controller: "chat", action: "display" %></li>
+    </ul>
+    <%= yield %>
+    <hr>
+    <div id="footer">
+      <p>Site developed by Gordian</p>
+    </div>
+  </body>
+</html>

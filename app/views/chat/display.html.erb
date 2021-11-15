@@ -1,0 +1,9 @@
+<h1>Chat</h1>
+<% if @messages %>
+  <% @messages.each do |message| %>
+  <div class="message_box">
+    <small><span class="orange"><%= message.user.name %></span></small><br>
+    &nbsp&nbsp&nbsp&nbsp&nbsp<%= message.content %>
+  </div>
+  <% end %>
+<% end %>
